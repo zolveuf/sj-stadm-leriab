@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tidigare Projekt - Sjöstedt Måleri AB</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">Sjöstedt Måleri AB</a>
+                <button class="hamburger" id="hamburger" aria-label="Öppna meny">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="om-oss.html">Om Oss</a></li>
+                    <li><a href="tjanster.html">Tjänster</a></li>
+                    <li><a href="projekt.html" class="active">Projekt</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Tidigare Projekt</h1>
+            <p>Nöjda kunder och fantastiska resultat - se vad vi har åstadkommit</p>
+        </div>
+    </section>
+
+    <!-- Project Filter -->
+    <section class="project-filters">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Alla Projekt</button>
+                <button class="filter-btn" data-filter="fasade">Fasadmålning</button>
+                <button class="filter-btn" data-filter="interior">Interiörmålning</button>
+                <button class="filter-btn" data-filter="foretag">Företagsmålning</button>
+                <button class="filter-btn" data-filter="bygg">Byggprojekt</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects-section">
+        <div class="container">
+            <!-- Project 1 - Fasadmålning -->
+            <div class="project-detail-card" data-category="fasade">
+                <div class="project-main-image">
+                    <div class="project-badge">Fasadmålning</div>
+                    <div class="before-after-slider">
+                        <div class="before-side">
+                            <div class="slider-label">Före</div>
+                            <div class="image-placeholder">
+                                <span>Före - Fasadmålning</span>
+                            </div>
+                        </div>
+                        <div class="after-side">
+                            <div class="slider-label">Efter</div>
+                            <div class="image-placeholder" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));">
+                                <span>Efter - Fasadmålning</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <div class="project-header">
+                        <h2>Villa i Växjö Centrum</h2>
+                        <span class="project-year">2024</span>
+                    </div>
+                    <p class="project-location">📍 Växjö, Småland</p>
+                    <p class="project-description">
+                        Komplett fasadmålning av villa med tak och snickerier. Projektet innefattade förberedelsearbete, grundmålning och två lager av färg. Vi arbetade med miljövänliga produkter för en hållbar lösning.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Yta</span>
+                            <span class="stat-value">450 m²</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Tid</span>
+                            <span class="stat-value">3 veckor</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Färg</span>
+                            <span class="stat-value">Ekologisk</span>
+                        </div>
+                    </div>
+                    <div class="project-features">
+                        <span class="feature-tag">Takmålning</span>
+                        <span class="feature-tag">Snickerimålning</span>
+                        <span class="feature-tag">Spackling</span>
+                        <span class="feature-tag">Förberedelse</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 - Interiörmålning -->
+            <div class="project-detail-card" data-category="interior">
+                <div class="project-main-image">
+                    <div class="project-badge">Interiörmålning</div>
+                    <div class="project-image-grid">
+                        <div class="grid-item">
+                            <div class="image-placeholder">
+                                <span>Före - Vardagsrum</span>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="image-placeholder" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));">
+                                <span>Efter - Vardagsrum</span>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="image-placeholder">
+                                <span>Före - Kök</span>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="image-placeholder" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));">
+                                <span>Efter - Kök</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <div class="project-header">
+                        <h2>Totalrenovering Lägenhet</h2>
+                        <span class="project-year">2024</span>
+                    </div>
+                    <p class="project-location">📍 Jönköping, Småland</p>
+                    <p class="project-description">
+                        Totalrenovering av 4-rummare med modern färgsättning. Alla rum målades med högsta kvalitet och omsorg för detaljer. Vi arbetade i nära samarbete med kunden för att skapa den rätta atmosfären.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Rum</span>
+                            <span class="stat-value">4 st</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Area</span>
+                            <span class="stat-value">85 m²</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Tid</span>
+                            <span class="stat-value">2 veckor</span>
+                        </div>
+                    </div>
+                    <div class="project-features">
+                        <span class="feature-tag">Takklimat</span>
+                        <span class="feature-tag">Golvlister</span>
+                        <span class="feature-tag">Dörrar</span>
+                        <span class="feature-tag">Snickerier</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 - Företagsmålning -->
+            <div class="project-detail-card" data-category="foretag">
+                <div class="project-main-image">
+                    <div class="project-badge">Företagsmålning</div>
+                    <div class="before-after-slider">
+                        <div class="before-side">
+                            <div class="slider-label">Före</div>
+                            <div class="image-placeholder">
+                                <span>Före - Kontorslokaler</span>
+                            </div>
+                        </div>
+                        <div class="after-side">
+                            <div class="slider-label">Efter</div>
+                            <div class="image-placeholder" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));">
+                                <span>Efter - Kontorslokaler</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <div class="project-header">
+                        <h2>Kontorsrenovering - Techbolag</h2>
+                        <span class="project-year">2023</span>
+                    </div>
+                    <p class="project-location">📍 Kalmar, Småland</p>
+                    <p class="project-description">
+                        Professionell målning av kontorslokaler för techföretag. Vi arbetade efter företagets tidsramar för minimal störning. Projektet innefattade moderna färger och heltäckande renovering av samtliga kontorsutrymmen.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Lokaler</span>
+                            <span class="stat-value">12 st</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Area</span>
+                            <span class="stat-value">800 m²</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Arbetare</span>
+                            <span class="stat-value">6 st</span>
+                        </div>
+                    </div>
+                    <div class="project-features">
+                        <span class="feature-tag">Kontorslokaler</span>
+                        <span class="feature-tag">Mötesrum</span>
+                        <span class="feature-tag">Reception</span>
+                        <span class="feature-tag">Korridorer</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 - Byggprojekt -->
+            <div class="project-detail-card" data-category="bygg">
+                <div class="project-main-image">
+                    <div class="project-badge">Byggprojekt</div>
+                    <div class="project-image-grid">
+                        <div class="grid-item full-width">
+                            <div class="image-placeholder" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));">
+                                <span>Nybyggnad - Fasader</span>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="image-placeholder">
+                                <span>Före - Byggfas</span>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="image-placeholder" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));">
+                                <span>Efter - Färdigt</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <div class="project-header">
+                        <h2>Lägenhetskomplex - Nybyggnation</h2>
+                        <span class="project-year">2023</span>
+                    </div>
+                    <p class="project-location">📍 Växjö, Småland</p>
+                    <p class="project-description">
+                        Totalentreprenad för målning av nybyggt lägenhetskomplex med 24 lägenheter. Vi stod för all interiör- och exteriörmålning samt koordinering med övriga hantverkare. Projektet genomfördes i flera faser för optimal planering.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Lägenheter</span>
+                            <span class="stat-value">24 st</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Tid</span>
+                            <span class="stat-value">6 månader</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Fasader</span>
+                            <span class="stat-value">4 st</span>
+                        </div>
+                    </div>
+                    <div class="project-features">
+                        <span class="feature-tag">Nybyggnation</span>
+                        <span class="feature-tag">Totalentreprenad</span>
+                        <span class="feature-tag">Fasader</span>
+                        <span class="feature-tag">Interiör</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5 - Fasadmålning -->
+            <div class="project-detail-card" data-category="fasade">
+                <div class="project-main-image">
+                    <div class="project-badge">Fasadmålning</div>
+                    <div class="before-after-slider">
+                        <div class="before-side">
+                            <div class="slider-label">Före</div>
+                            <div class="image-placeholder">
+                                <span>Före - Träfasad</span>
+                            </div>
+                        </div>
+                        <div class="after-side">
+                            <div class="slider-label">Efter</div>
+                            <div class="image-placeholder" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));">
+                                <span>Efter - Träfasad</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <div class="project-header">
+                        <h2>Träfasadmålning - Landshus</h2>
+                        <span class="project-year">2023</span>
+                    </div>
+                    <p class="project-location">📍 Värnamo, Småland</p>
+                    <p class="project-description">
+                        Specialiserad målning av träfasad på landshus. Projektet krävde noggrann förberedelse och behandling av träet innan färgläggning. Vi använde högpresterande färger för långvarig skydd mot väder och vind.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Yta</span>
+                            <span class="stat-value">320 m²</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Färg</span>
+                            <span class="stat-value">Träskydd</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Lager</span>
+                            <span class="stat-value">3 st</span>
+                        </div>
+                    </div>
+                    <div class="project-features">
+                        <span class="feature-tag">Träfasad</span>
+                        <span class="feature-tag">Skydd</span>
+                        <span class="feature-tag">Behandling</span>
+                        <span class="feature-tag">Snickerier</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6 - Interiörmålning -->
+            <div class="project-detail-card" data-category="interior">
+                <div class="project-main-image">
+                    <div class="project-badge">Interiörmålning</div>
+                    <div class="project-image-grid">
+                        <div class="grid-item">
+                            <div class="image-placeholder">
+                                <span>Före - Kök</span>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="image-placeholder" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));">
+                                <span>Efter - Kök</span>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="image-placeholder">
+                                <span>Före - Sovrum</span>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="image-placeholder" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));">
+                                <span>Efter - Sovrum</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <div class="project-header">
+                        <h2>Villamålning - Modern Renovering</h2>
+                        <span class="project-year">2023</span>
+                    </div>
+                    <p class="project-location">📍 Växjö, Småland</p>
+                    <p class="project-description">
+                        Omfattande renovering av villa med modern färgsättning. Vi målade samtliga rum inklusive kök, badrum och specialrum. Projektet genomfördes i samråd med inredningsarkitekt för optimal resultat.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Rum</span>
+                            <span class="stat-value">8 st</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Area</span>
+                            <span class="stat-value">180 m²</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Tid</span>
+                            <span class="stat-value">4 veckor</span>
+                        </div>
+                    </div>
+                    <div class="project-features">
+                        <span class="feature-tag">Kök</span>
+                        <span class="feature-tag">Badrum</span>
+                        <span class="feature-tag">Tak</span>
+                        <span class="feature-tag">Väggar</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Redo att börja ditt projekt?</h2>
+            <p>Kontakta oss idag för en kostnadsfri offert</p>
+            <a href="kontakt.html" class="btn btn-primary">Kontakta oss</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Sjöstedt Måleri AB</h3>
+                    <p>Professionell målning i Småland. Vi förvandlar dina visioner till verklighet med vår passion för måleri och expertis.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/p/Sj%C3%B6stedts-M%C3%A5leri-AB-100066792379905/" target="_blank" class="social-icon" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/sjostedtsmaleri/" target="_blank" class="social-icon" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Tjänster</h4>
+                    <ul>
+                        <li><a href="tjanster.html">Bostadsmålning</a></li>
+                        <li><a href="tjanster.html">Företagsmålning</a></li>
+                        <li><a href="tjanster.html">Byggprojekt</a></li>
+                        <li><a href="tjanster.html">Spackling & Fix</a></li>
+                        <li><a href="tjanster.html">Specialtjänster</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Företag</h4>
+                    <ul>
+                        <li><a href="om-oss.html">Om Oss</a></li>
+                        <li><a href="om-oss.html">Vår Historia</a></li>
+                        <li><a href="om-oss.html">Våra Värderingar</a></li>
+                        <li><a href="om-oss.html">Certifieringar</a></li>
+                        <li><a href="kontakt.html">Karriär</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Kontakt</h4>
+                    <ul>
+                        <li><a href="tel:0735271957">Telefon: 073-527 19 57</a></li>
+                        <li><a href="mailto:sjostedtsmaleri@gmail.com">Email: sjostedtsmaleri@gmail.com</a></li>
+                        <li>Torsgatan 117, Ljungby, Sweden</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Sjöstedt Måleri AB. Alla rättigheter förbehållna.</p>
+                    <p class="credits">Producerad av <a href="https://www.linkedin.com/in/martin-pranjic-99a278310/" target="_blank" class="credit-link">Martin Pranjic</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Project filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-detail-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    const filter = this.getAttribute('data-filter');
+
+                    projectCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 10);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
