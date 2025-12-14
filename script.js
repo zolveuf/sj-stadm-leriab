@@ -1,3 +1,16 @@
+// Registrera Service Worker för video-caching
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+                console.log('Service Worker registrerad:', registration.scope);
+            })
+            .catch((error) => {
+                console.log('Service Worker registrering misslyckades:', error);
+            });
+    });
+}
+
 // Hamburger Menu Functionality
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
@@ -126,27 +139,18 @@ document.addEventListener('DOMContentLoaded', () => {
         body.classList.remove('loading');
     }
 
-    // Add scroll animations (optional enhancement)
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
+    // Enkla scroll-animationer
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('visible');
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.1 });
 
-    // Apply animations to elements
-    const animatedElements = document.querySelectorAll('.feature-card, .service-card, .value-card, .process-step');
-    animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    // Lägg till animation på sektioner och kort
+    document.querySelectorAll('.about-preview, .services-preview, .before-after, .social-media, .trust-signals, .cta, .process, .service-detailed-card, .project-item, .trust-item, .process-step, .booking-step, .benefit-item, .info-grid-card').forEach(el => {
+        el.classList.add('fade-in');
         observer.observe(el);
     });
 });
