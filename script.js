@@ -1,16 +1,3 @@
-// Registrera Service Worker för video-caching
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-            .then((registration) => {
-                console.log('Service Worker registrerad:', registration.scope);
-            })
-            .catch((error) => {
-                console.log('Service Worker registrering misslyckades:', error);
-            });
-    });
-}
-
 // Hamburger Menu Functionality
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
