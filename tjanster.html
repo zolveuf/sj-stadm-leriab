@@ -3,7 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tjänster - Sjöstedt Måleri AB</title>
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Måleritjänster Ljungby | Bostadsmålning, Fasadmålning & Spackling - Sjöstedt Måleri AB</title>
+    <meta name="description" content="Komplett utbud av måleritjänster i Ljungby. Bostadsmålning, fasadmålning, företagsmålning, spackling och specialtjänster. Gratis offert! ☎ 073-527 19 57">
+    <meta name="keywords" content="måleritjänster Ljungby, bostadsmålning Ljungby, fasadmålning Ljungby, företagsmålning, spackling, interiörmålning, exteriörmålning, takmålning Ljungby">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://malerisjostedts.se/tjanster.html">
+    
+    <!-- Geo Meta Tags -->
+    <meta name="geo.region" content="SE-G">
+    <meta name="geo.placename" content="Ljungby, Småland">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://malerisjostedts.se/tjanster.html">
+    <meta property="og:title" content="Måleritjänster Ljungby | Sjöstedt Måleri AB">
+    <meta property="og:description" content="Komplett utbud av måleritjänster i Ljungby. Bostadsmålning, fasadmålning och mer. Gratis offert!">
+    <meta property="og:locale" content="sv_SE">
+    
+    <!-- Service Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Måleritjänster",
+      "provider": {
+        "@type": "HousePainter",
+        "name": "Sjöstedt Måleri AB",
+        "telephone": "+46735271957",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Ljungby",
+          "addressRegion": "Kronobergs län",
+          "addressCountry": "SE"
+        }
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Ljungby"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Måleritjänster",
+        "itemListElement": [
+          {
+            "@type": "OfferCatalog",
+            "name": "Bostadsmålning",
+            "description": "Professionell målning av bostäder, både interiör och exteriör"
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Fasadmålning",
+            "description": "Målning av fasader på villor och byggnader"
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Företagsmålning",
+            "description": "Målning av kontor, butiker och industrilokaler"
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Spackling & Fix",
+            "description": "Spackling, reparationer och ytbehandling"
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Hem",
+          "item": "https://malerisjostedts.se/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tjänster",
+          "item": "https://malerisjostedts.se/tjanster.html"
+        }
+      ]
+    }
+    </script>
+    
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,9 +109,9 @@
                 </button>
                 <ul class="nav-menu" id="nav-menu">
                     <li><a href="index.html">Hem</a></li>
-                    <li><a href="om-oss.html">Om Oss</a></li>
                     <li><a href="tjanster.html" class="active">Tjänster</a></li>
                     <li><a href="projekt.html">Projekt</a></li>
+                    <li><a href="boka.html" class="nav-booking">Boka Målning</a></li>
                     <li><a href="kontakt.html">Kontakt</a></li>
                 </ul>
             </div>
@@ -40,102 +130,147 @@
     <section class="page-content">
         <div class="container">
             <div class="services-detailed">
-                <div class="service-alternating service-left">
-                    <div class="service-text">
+                <div class="service-accordion">
+                    <div class="service-accordion-header">
                         <h2>Bostadsmålning</h2>
-                        <p>Vi erbjuder komplett målning av både interiör och exteriör för bostäder. Våra tjänster inkluderar:</p>
-                        <ul class="service-list">
-                            <li>Lägenhetsmålning - inne och ute</li>
-                            <li>Villamålning - hela huset</li>
-                            <li>Tak- och fasadsmålning</li>
-                            <li>Snickerimålning - dörrar, fönster och paneler</li>
-                            <li>Specialeffekter och dekorativa tekniker</li>
-                        </ul>
-                        <p>Vi arbetar med alla märken av färg och använder miljövänliga produkter när det är möjligt.</p>
+                        <span class="accordion-icon">+</span>
                     </div>
-                    <div class="service-image">
-                        <div class="image-placeholder">
-                            <span>Bostadsmålning</span>
+                    <div class="service-accordion-content">
+                        <div class="service-alternating service-left">
+                            <div class="service-text">
+                                <p>Vi erbjuder komplett målning av både interiör och exteriör för bostäder. Våra tjänster inkluderar:</p>
+                                <ul class="service-list">
+                                    <li>Lägenhetsmålning - inne och ute</li>
+                                    <li>Villamålning - hela huset</li>
+                                    <li>Tak- och fasadsmålning</li>
+                                    <li>Snickerimålning - dörrar, fönster och paneler</li>
+                                    <li>Specialeffekter och dekorativa tekniker</li>
+                                </ul>
+                                <p><strong>Varför välja oss?</strong></p>
+                                <p>Vi arbetar med alla märken av färg och använder miljövänliga produkter när det är möjligt. Vårt team har många års erfarenhet av bostadsmålning och vi garanterar ett professionellt resultat som varar länge.</p>
+                                <p><strong>Priser:</strong> Från 200 kr/m² för interiörmålning, från 150 kr/m² för exteriörmålning. Gratis offert ingår alltid.</p>
+                            </div>
+                            <div class="service-image">
+                                <div class="image-placeholder">
+                                    <span>Bostadsmålning</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="service-alternating service-right">
-                    <div class="service-image">
-                        <div class="image-placeholder">
-                            <span>Företagsmålning</span>
-                        </div>
-                    </div>
-                    <div class="service-text">
+                <div class="service-accordion">
+                    <div class="service-accordion-header">
                         <h2>Företagsmålning</h2>
-                        <p>Professionell målning för företag, kontor och industrier:</p>
-                        <ul class="service-list">
-                            <li>Kontorsrenovering och målning</li>
-                            <li>Industrimålning - fabriker och lager</li>
-                            <li>Butiks- och handelsutrymmen</li>
-                            <li>Fasadmålning av kommersiella byggnader</li>
-                            <li>Brandväggsmålning och reklammålning</li>
-                        </ul>
-                        <p>Vi förstår vikten av minimal störning för ditt företag och arbetar efter dina tidsramar.</p>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="service-accordion-content">
+                        <div class="service-alternating service-right">
+                            <div class="service-image">
+                                <div class="image-placeholder">
+                                    <span>Företagsmålning</span>
+                                </div>
+                            </div>
+                            <div class="service-text">
+                                <p>Professionell målning för företag, kontor och industrier:</p>
+                                <ul class="service-list">
+                                    <li>Kontorsrenovering och målning</li>
+                                    <li>Industrimålning - fabriker och lager</li>
+                                    <li>Butiks- och handelsutrymmen</li>
+                                    <li>Fasadmålning av kommersiella byggnader</li>
+                                    <li>Brandväggsmålning och reklammålning</li>
+                                </ul>
+                                <p><strong>Varför välja oss?</strong></p>
+                                <p>Vi förstår vikten av minimal störning för ditt företag och arbetar efter dina tidsramar. Vi kan arbeta kvällar och helger för att minimera påverkan på er verksamhet.</p>
+                                <p><strong>Priser:</strong> Anpassade efter projektets omfattning. Kontakta oss för en skräddarsydd offert.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="service-alternating service-left">
-                    <div class="service-text">
+                <div class="service-accordion">
+                    <div class="service-accordion-header">
                         <h2>Byggprojekt</h2>
-                        <p>Totalentreprenad och målning i samband med nybyggnation:</p>
-                        <ul class="service-list">
-                            <li>Nybyggnation - målning av nya byggnader</li>
-                            <li>Renovering och ombyggnation</li>
-                            <li>Totalkontrakt för utbyggnad</li>
-                            <li>Målning av nya lägenhetskomplex</li>
-                            <li>Samarbete med byggentreprenörer</li>
-                        </ul>
-                        <p>Vi har lång erfarenhet av större projekt och kan hantera komplexa byggprojekt.</p>
+                        <span class="accordion-icon">+</span>
                     </div>
-                    <div class="service-image">
-                        <div class="image-placeholder">
-                            <span>Byggprojekt</span>
+                    <div class="service-accordion-content">
+                        <div class="service-alternating service-left">
+                            <div class="service-text">
+                                <p>Totalentreprenad och målning i samband med nybyggnation:</p>
+                                <ul class="service-list">
+                                    <li>Nybyggnation - målning av nya byggnader</li>
+                                    <li>Renovering och ombyggnation</li>
+                                    <li>Totalkontrakt för utbyggnad</li>
+                                    <li>Målning av nya lägenhetskomplex</li>
+                                    <li>Samarbete med byggentreprenörer</li>
+                                </ul>
+                                <p><strong>Varför välja oss?</strong></p>
+                                <p>Vi har lång erfarenhet av större projekt och kan hantera komplexa byggprojekt. Vi samarbetar nära med byggentreprenörer och följer alla byggnormer och säkerhetsregler.</p>
+                                <p><strong>Priser:</strong> Totalkontrakt anpassas efter projektets omfattning. Vi erbjuder konkurrenskraftiga priser för större projekt.</p>
+                            </div>
+                            <div class="service-image">
+                                <div class="image-placeholder">
+                                    <span>Byggprojekt</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="service-alternating service-right">
-                    <div class="service-image">
-                        <div class="image-placeholder">
-                            <span>Spackling & Fix</span>
-                        </div>
-                    </div>
-                    <div class="service-text">
+                <div class="service-accordion">
+                    <div class="service-accordion-header">
                         <h2>Spackling & Fix</h2>
-                        <p>Förberedelser och reparationer inför målning:</p>
-                        <ul class="service-list">
-                            <li>Spackling och putsmålning</li>
-                            <li>Reparation av skador och sprickor</li>
-                            <li>Ytbehandling och slipning</li>
-                            <li>Grundmålning och primer</li>
-                            <li>Dammfri slipning och sanering</li>
-                        </ul>
-                        <p>En korrekt förberedelse är grunden för ett perfekt slutresultat. Vi tar tid för detaljerna.</p>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="service-accordion-content">
+                        <div class="service-alternating service-right">
+                            <div class="service-image">
+                                <div class="image-placeholder">
+                                    <span>Spackling & Fix</span>
+                                </div>
+                            </div>
+                            <div class="service-text">
+                                <p>Förberedelser och reparationer inför målning:</p>
+                                <ul class="service-list">
+                                    <li>Spackling och putsmålning</li>
+                                    <li>Reparation av skador och sprickor</li>
+                                    <li>Ytbehandling och slipning</li>
+                                    <li>Grundmålning och primer</li>
+                                    <li>Dammfri slipning och sanering</li>
+                                </ul>
+                                <p><strong>Varför välja oss?</strong></p>
+                                <p>En korrekt förberedelse är grunden för ett perfekt slutresultat. Vi tar tid för detaljerna och använder bästa material för att säkerställa att målningen håller länge.</p>
+                                <p><strong>Priser:</strong> Från 80 kr/m² för spackling och ytbehandling. Grundmålning från 50 kr/m².</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="service-alternating service-left">
-                    <div class="service-text">
+                <div class="service-accordion">
+                    <div class="service-accordion-header">
                         <h2>Specialtjänster</h2>
-                        <p>Ytterligare tjänster vi erbjuder:</p>
-                        <ul class="service-list">
-                            <li>Dekorativ målning och tekniker</li>
-                            <li>Betongreparation och -behandling</li>
-                            <li>Träbehandling och lasermålning</li>
-                            <li>Fönsterlackering</li>
-                            <li>Golvbehandling och målning</li>
-                        </ul>
-                        <p>Våra specialister kan hjälpa till med de mest krävande projekt.</p>
+                        <span class="accordion-icon">+</span>
                     </div>
-                    <div class="service-image">
-                        <div class="image-placeholder">
-                            <span>Specialtjänster</span>
+                    <div class="service-accordion-content">
+                        <div class="service-alternating service-left">
+                            <div class="service-text">
+                                <p>Ytterligare tjänster vi erbjuder:</p>
+                                <ul class="service-list">
+                                    <li>Dekorativ målning och tekniker</li>
+                                    <li>Betongreparation och -behandling</li>
+                                    <li>Träbehandling och lasermålning</li>
+                                    <li>Fönsterlackering</li>
+                                    <li>Golvbehandling och målning</li>
+                                </ul>
+                                <p><strong>Varför välja oss?</strong></p>
+                                <p>Våra specialister kan hjälpa till med de mest krävande projekt. Vi har expertis inom många olika tekniker och kan skräddarsy lösningen efter dina behov.</p>
+                                <p><strong>Priser:</strong> Anpassas efter projektets komplexitet. Kontakta oss för en offert.</p>
+                            </div>
+                            <div class="service-image">
+                                <div class="image-placeholder">
+                                    <span>Specialtjänster</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -221,10 +356,9 @@
                 <div class="footer-column">
                     <h4>Företag</h4>
                     <ul>
-                        <li><a href="om-oss.html">Om Oss</a></li>
-                        <li><a href="om-oss.html">Vår Historia</a></li>
-                        <li><a href="om-oss.html">Våra Värderingar</a></li>
-                        <li><a href="om-oss.html">Certifieringar</a></li>
+                        <li><a href="kontakt.html">Kontakta oss</a></li>
+                        <li><a href="tjanster.html">Våra tjänster</a></li>
+                        <li><a href="projekt.html">Våra projekt</a></li>
                         <li><a href="kontakt.html">Karriär</a></li>
                     </ul>
                 </div>
@@ -242,13 +376,36 @@
             <div class="footer-bottom">
                 <div class="footer-bottom-content">
                     <p>&copy; 2025 Sjöstedt Måleri AB. Alla rättigheter förbehållna.</p>
-                    <p class="credits">Producerad av <a href="https://www.linkedin.com/in/martin-pranjic-99a278310/" target="_blank" class="credit-link">Martin Pranjic</a></p>
+                    <p class="credits">Hemsida producerad av <a href="https://www.linkedin.com/in/martin-pranjic-99a278310/" target="_blank" class="credit-link">Martin Pranjic</a></p>
                 </div>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const accordionHeaders = document.querySelectorAll('.service-accordion-header');
+            
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const accordion = this.parentElement;
+                    const isActive = accordion.classList.contains('active');
+                    
+                    // Close all accordions
+                    document.querySelectorAll('.service-accordion').forEach(acc => {
+                        acc.classList.remove('active');
+                    });
+                    
+                    // Open clicked accordion if it wasn't active
+                    if (!isActive) {
+                        accordion.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
 

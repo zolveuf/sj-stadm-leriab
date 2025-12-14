@@ -1,0 +1,12 @@
+# Robots.txt for Sjöstedt Måleri AB
+# https://malerisjostedts.se/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://malerisjostedts.se/sitemap.xml
+
+# Crawl-delay (optional, be kind to the server)
+Crawl-delay: 1
+

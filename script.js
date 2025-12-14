@@ -59,23 +59,89 @@ if (contactForm) {
     });
 }
 
-// Add scroll animations (optional enhancement)
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
-
-// Apply animations to elements
+// Loading Screen & Video Handling
 document.addEventListener('DOMContentLoaded', () => {
+    const loadingScreen = document.getElementById('loading-screen');
+    const heroVideo = document.getElementById('hero-video');
+    const body = document.body;
+
+    // Function to hide loading screen
+    function hideLoadingScreen() {
+        // Always remove loading class from body
+        body.classList.remove('loading');
+        
+        if (loadingScreen) {
+            loadingScreen.classList.add('hidden');
+            
+            // Remove loading screen from DOM after animation
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+            }, 500);
+        }
+    }
+
+    // Only add loading class if loading screen exists
+    if (loadingScreen) {
+        body.classList.add('loading');
+
+        // Check if video exists and handle loading
+        if (heroVideo) {
+            // Check if video has sources (if not, it means video hasn't been added yet)
+            const hasVideoSources = heroVideo.querySelector('source') !== null;
+
+            if (hasVideoSources) {
+                // Wait for video to be ready
+                heroVideo.addEventListener('loadeddata', () => {
+                    heroVideo.classList.add('loaded');
+                    hideLoadingScreen();
+                });
+
+                // Fallback: hide loading screen after max 5 seconds even if video doesn't load
+                setTimeout(() => {
+                    if (loadingScreen && !loadingScreen.classList.contains('hidden')) {
+                        heroVideo.classList.add('loaded');
+                        hideLoadingScreen();
+                    }
+                }, 5000);
+
+                // Handle video errors
+                heroVideo.addEventListener('error', () => {
+                    console.warn('Video failed to load, hiding loading screen');
+                    hideLoadingScreen();
+                });
+            } else {
+                // No video sources yet, hide loading screen immediately
+                setTimeout(() => {
+                    hideLoadingScreen();
+                }, 1000);
+            }
+        } else {
+            // No video element, hide loading screen after short delay
+            setTimeout(() => {
+                hideLoadingScreen();
+            }, 1000);
+        }
+    } else {
+        // No loading screen on this page, ensure body doesn't have loading class
+        body.classList.remove('loading');
+    }
+
+    // Add scroll animations (optional enhancement)
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Apply animations to elements
     const animatedElements = document.querySelectorAll('.feature-card, .service-card, .value-card, .process-step');
     animatedElements.forEach(el => {
         el.style.opacity = '0';
