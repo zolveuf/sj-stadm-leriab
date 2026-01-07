@@ -151,14 +151,21 @@ a {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--primary-color);
+    display: flex;
+    align-items: center;
     transition: var(--transition);
 }
 
-.logo:hover {
-    color: var(--secondary-color);
+.logo img {
+    height: auto;
+    max-height: 50px;
+    width: auto;
+    transition: var(--transition);
+}
+
+.logo:hover img {
+    opacity: 0.8;
+    transform: scale(1.05);
 }
 
 .nav-menu {

@@ -88,7 +88,7 @@
     <nav class="navbar">
         <div class="container">
             <div class="nav-wrapper">
-                <a href="index.html" class="logo">Sjöstedt Måleri AB</a>
+                <a href="index.html" class="logo"><img src="images/logga.png" alt="Sjöstedt Måleri AB" width="100"></a>
                 <button class="hamburger" id="hamburger" aria-label="Öppna meny">
                     <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -104,7 +104,7 @@
                     <li><a href="index.html">Hem</a></li>
                     <li><a href="tjanster.html">Tjänster</a></li>
                     <li><a href="projekt.html">Projekt</a></li>
-                    <li><a href="boka.html" class="nav-booking">Boka Målning</a></li>
+                    <li><a href="boka.html" class="nav-booking">Boka tjänst</a></li>
                     <li><a href="kontakt.html" class="active">Kontakt</a></li>
                 </ul>
             </div>
@@ -163,7 +163,6 @@
                                 <option value="">Välj ämne</option>
                                 <option value="offer">Förfrågan om offert</option>
                                 <option value="info">Förfrågan om information</option>
-                                <option value="service">Vårdsråd</option>
                                 <option value="other">Övrigt</option>
                             </select>
                         </div>
@@ -193,7 +192,7 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>Sjöstedt Måleri AB</h3>
-                    <p>Professionell målning i Småland. Vi förvandlar dina visioner till verklighet med vår passion för måleri och expertis.</p>
+                    <p>Professionell målning i Ljungby. Vi förvandlar dina visioner till verklighet med vår passion för måleri och expertis.</p>
                     <div class="social-icons">
                         <a href="https://www.facebook.com/p/Sj%C3%B6stedts-M%C3%A5leri-AB-100066792379905/" target="_blank" class="social-icon" aria-label="Facebook">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -211,11 +210,9 @@
                 <div class="footer-column">
                     <h4>Tjänster</h4>
                     <ul>
-                        <li><a href="tjanster.html">Bostadsmålning</a></li>
-                        <li><a href="tjanster.html">Företagsmålning</a></li>
-                        <li><a href="tjanster.html">Byggprojekt</a></li>
-                        <li><a href="tjanster.html">Spackling & Fix</a></li>
-                        <li><a href="tjanster.html">Specialtjänster</a></li>
+                        <li><a href="tjanster.html">Invändig målning & tapetsering</a></li>
+                        <li><a href="tjanster.html">Utvändig målning</a></li>
+                        <li><a href="tjanster.html">Takrengöring & Algbehandling</a></li>
                     </ul>
                 </div>
                 
@@ -225,7 +222,6 @@
                         <li><a href="kontakt.html">Kontakta oss</a></li>
                         <li><a href="tjanster.html">Våra tjänster</a></li>
                         <li><a href="projekt.html">Våra projekt</a></li>
-                        <li><a href="kontakt.html">Karriär</a></li>
                     </ul>
                 </div>
                 
@@ -241,7 +237,7 @@
             
             <div class="footer-bottom">
                 <div class="footer-bottom-content">
-                    <p>&copy; 2025 Sjöstedt Måleri AB. Alla rättigheter förbehållna.</p>
+                    <p>&copy; <span id="year"></span> Sjöstedt Måleri AB. Alla rättigheter förbehållna.</p>
                     <p class="credits">Hemsida producerad av <a href="https://www.linkedin.com/in/martin-pranjic-99a278310/" target="_blank" class="credit-link">Martin Pranjic</a></p>
                 </div>
             </div>
@@ -249,6 +245,9 @@
     </footer>
 
     <script src="script.js?v=4"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
 

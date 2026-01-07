@@ -51,7 +51,7 @@
     <nav class="navbar">
         <div class="container">
             <div class="nav-wrapper">
-                <a href="index.html" class="logo">Sjöstedt Måleri AB</a>
+                <a href="index.html" class="logo"><img src="images/logga.png" alt="Sjöstedt Måleri AB" width="100"></a>
                 <button class="hamburger" id="hamburger" aria-label="Öppna meny">
                     <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -67,7 +67,7 @@
                     <li><a href="index.html">Hem</a></li>
                     <li><a href="tjanster.html">Tjänster</a></li>
                     <li><a href="projekt.html">Projekt</a></li>
-                    <li><a href="boka.html" class="nav-booking active">Boka Målning</a></li>
+                    <li><a href="boka.html" class="nav-booking active">Boka tjänst</a></li>
                     <li><a href="kontakt.html">Kontakt</a></li>
                 </ul>
             </div>
@@ -77,7 +77,7 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1>Boka Din Målning</h1>
+            <h1>Boka din tjänst</h1>
             <p>Få en kostnadsfri offert och hembesök med professionell rådgivning</p>
         </div>
     </section>
@@ -106,11 +106,7 @@
                     <h3>Hembesök & offert</h3>
                     <p>Vi kommer hem och ger dig en kostnadsfri offert</p>
                 </div>
-                <div class="booking-step">
-                    <div class="step-number">4</div>
-                    <h3>Bokning bekräftad</h3>
-                    <p>När du godkänner offerten bokar vi in ditt projekt</p>
-                </div>
+              
             </div>
 
             <div class="booking-form-section">
@@ -133,53 +129,23 @@
                         </div>
                         <div class="form-group">
                             <label for="booking-address">Adress *</label>
-                            <input type="text" id="booking-address" name="address" placeholder="Var ska målningen utföras?" required>
+                            <input type="text" id="booking-address" name="address" placeholder="Var ska tjänsten utföras?" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="booking-service">Typ av målning *</label>
+                            <label for="booking-service">Typ av tjänst *</label>
                             <select id="booking-service" name="service" required>
-                                <option value="">Välj typ av målning</option>
-                                <option value="bostad">Bostadsmålning</option>
-                                <option value="foretag">Företagsmålning</option>
-                                <option value="fasad">Fasadmålning</option>
-                                <option value="interior">Interiörmålning</option>
-                                <option value="spackling">Spackling & Fix</option>
-                                <option value="special">Specialtjänster</option>
-                                <option value="other">Annat</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="booking-area">Ungefärlig yta</label>
-                            <input type="text" id="booking-area" name="area" placeholder="t.ex. 50 m²">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="booking-preferred-date">Önskat datum</label>
-                            <input type="date" id="booking-preferred-date" name="preferred-date">
-                        </div>
-                        <div class="form-group">
-                            <label for="booking-urgency">Hur brådskande är det?</label>
-                            <select id="booking-urgency" name="urgency">
-                                <option value="">Välj</option>
-                                <option value="asap">Så snart som möjligt</option>
-                                <option value="within-month">Inom en månad</option>
-                                <option value="within-3months">Inom 3 månader</option>
-                                <option value="flexible">Jag är flexibel</option>
+                                <option value="">Välj typ av tjänst</option>
+                                <option value="bostad">Invändig målning & tapetsering</option>  
+                                <option value="foretag">Utvändig målning</option>
+                                <option value="fasad">Takrengöring & Algbehandling</option>
                             </select>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="booking-message">Beskriv ditt projekt *</label>
                         <textarea id="booking-message" name="message" rows="6" placeholder="Berätta mer om vad du vill ha målat, önskad färg, eventuella särskilda önskemål etc." required></textarea>
-                    </div>
-                    <div class="form-group checkbox-group">
-                        <label>
-                            <input type="checkbox" name="consent" required>
-                            <span>Jag samtycker till att mina personuppgifter hanteras enligt GDPR *</span>
-                        </label>
                     </div>
                     <div class="form-submit-wrapper">
                         <button type="submit" class="btn btn-primary" id="booking-submit-btn">
@@ -204,7 +170,7 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>Sjöstedt Måleri AB</h3>
-                    <p>Professionell målning i Småland. Vi förvandlar dina visioner till verklighet med vår passion för måleri och expertis.</p>
+                    <p>Professionell målning i Ljungby. Vi förvandlar dina visioner till verklighet med vår passion för måleri och expertis.</p>
                     <div class="social-icons">
                         <a href="https://www.facebook.com/p/Sj%C3%B6stedts-M%C3%A5leri-AB-100066792379905/" target="_blank" class="social-icon" aria-label="Facebook">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -222,11 +188,9 @@
                 <div class="footer-column">
                     <h4>Tjänster</h4>
                     <ul>
-                        <li><a href="tjanster.html">Bostadsmålning</a></li>
-                        <li><a href="tjanster.html">Företagsmålning</a></li>
-                        <li><a href="tjanster.html">Byggprojekt</a></li>
-                        <li><a href="tjanster.html">Spackling & Fix</a></li>
-                        <li><a href="tjanster.html">Specialtjänster</a></li>
+                        <li><a href="tjanster.html">Invändig målning & tapetsering</a></li>
+                        <li><a href="tjanster.html">Utvändig målning</a></li>
+                        <li><a href="tjanster.html">Takrengöring & Algbehandling</a></li>
                     </ul>
                 </div>
                 
@@ -236,7 +200,6 @@
                         <li><a href="kontakt.html">Kontakta oss</a></li>
                         <li><a href="tjanster.html">Våra tjänster</a></li>
                         <li><a href="projekt.html">Våra projekt</a></li>
-                        <li><a href="kontakt.html">Karriär</a></li>
                     </ul>
                 </div>
                 
@@ -252,7 +215,7 @@
             
             <div class="footer-bottom">
                 <div class="footer-bottom-content">
-                    <p>&copy; 2025 Sjöstedt Måleri AB. Alla rättigheter förbehållna.</p>
+                    <p>&copy; <span id="year"></span> Sjöstedt Måleri AB. Alla rättigheter förbehållna.</p>
                     <p class="credits">Hemsida producerad av <a href="https://www.linkedin.com/in/martin-pranjic-99a278310/" target="_blank" class="credit-link">Martin Pranjic</a></p>
                 </div>
             </div>
@@ -299,6 +262,9 @@
                 }, 1500);
             });
         }
+    </script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
