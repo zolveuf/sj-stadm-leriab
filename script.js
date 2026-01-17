@@ -81,7 +81,7 @@ if (contactForm) {
                 formMessage.style.background = '#d4edda';
                 formMessage.style.border = '2px solid #28a745';
                 formMessage.style.color = '#155724';
-                formMessage.innerHTML = 'Tack för ditt meddelande! Vi kommer att kontakta dig snart.<br><small style="display: block; margin-top: 0.5rem; opacity: 0.8;">📱 Ett SMS-bekräftelse har skickats till ditt telefonnummer.</small>';
+                formMessage.textContent = 'Tack för ditt meddelande! Vi kommer att kontakta dig snart.';
                 contactForm.reset();
                 
                 // Scroll to message
@@ -146,14 +146,18 @@ if (bookingForm) {
                 // Show success message
                 if (formSuccess) {
                     formSuccess.style.display = 'block';
+                    formSuccess.style.visibility = 'visible';
                     bookingForm.style.display = 'none';
-                    formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    // Small delay to ensure display change takes effect
+                    setTimeout(() => {
+                        formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }, 100);
                 } else if (formMessage) {
                     formMessage.style.display = 'block';
                     formMessage.style.background = '#d4edda';
                     formMessage.style.border = '2px solid #28a745';
                     formMessage.style.color = '#155724';
-                    formMessage.innerHTML = 'Tack för din bokningsförfrågan! Vi har mottagit din förfrågan och kommer att kontakta dig inom 24 timmar.<br><small style="display: block; margin-top: 0.5rem; opacity: 0.8;">📱 Ett SMS-bekräftelse har skickats till ditt telefonnummer.</small>';
+                    formMessage.textContent = 'Tack för din bokningsförfrågan! Vi har mottagit din förfrågan och kommer att kontakta dig inom 24 timmar.';
                     formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
                 }
                 bookingForm.reset();
