@@ -1449,6 +1449,12 @@ a {
     margin: 0;
 }
 
+.form-success p:last-child {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
 .form-submit-wrapper {
     margin-top: 1.5rem;
 }

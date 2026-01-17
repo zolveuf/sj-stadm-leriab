@@ -81,7 +81,7 @@ if (contactForm) {
                 formMessage.style.background = '#d4edda';
                 formMessage.style.border = '2px solid #28a745';
                 formMessage.style.color = '#155724';
-                formMessage.textContent = 'Tack för ditt meddelande! Vi kommer att kontakta dig snart.';
+                formMessage.innerHTML = 'Tack för ditt meddelande! Vi kommer att kontakta dig snart.<br><small style="display: block; margin-top: 0.5rem; opacity: 0.8;">📱 Ett SMS-bekräftelse har skickats till ditt telefonnummer.</small>';
                 contactForm.reset();
                 
                 // Scroll to message
@@ -153,7 +153,7 @@ if (bookingForm) {
                     formMessage.style.background = '#d4edda';
                     formMessage.style.border = '2px solid #28a745';
                     formMessage.style.color = '#155724';
-                    formMessage.textContent = 'Tack för din bokningsförfrågan! Vi har mottagit din förfrågan och kommer att kontakta dig inom 24 timmar.';
+                    formMessage.innerHTML = 'Tack för din bokningsförfrågan! Vi har mottagit din förfrågan och kommer att kontakta dig inom 24 timmar.<br><small style="display: block; margin-top: 0.5rem; opacity: 0.8;">📱 Ett SMS-bekräftelse har skickats till ditt telefonnummer.</small>';
                     formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
                 }
                 bookingForm.reset();
