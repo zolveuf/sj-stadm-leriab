@@ -78,28 +78,101 @@ body.menu-open {
 .loading-content {
     text-align: center;
     color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
 }
 
-.loading-logo {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    letter-spacing: 2px;
+.loading-logo-wrapper {
+    animation: fadeInScale 0.8s ease-out;
+}
+
+.loading-logo-img {
+    max-width: 200px;
+    height: auto;
+    display: block;
+}
+
+.loading-spinner-wrapper {
+    position: relative;
+    width: 80px;
+    height: 80px;
 }
 
 .loading-spinner {
-    width: 50px;
-    height: 50px;
-    border: 4px solid rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.spinner-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 3px solid transparent;
     border-top-color: var(--primary-color);
     border-radius: 50%;
-    animation: spin 1s linear infinite;
-    margin: 0 auto;
+    animation: spin 1.2s linear infinite;
 }
+
+.spinner-ring:nth-child(1) {
+    animation-duration: 1.2s;
+    border-top-color: var(--primary-color);
+}
+
+.spinner-ring:nth-child(2) {
+    width: 70%;
+    height: 70%;
+    top: 15%;
+    left: 15%;
+    animation-duration: 1s;
+    animation-direction: reverse;
+    border-top-color: var(--secondary-color);
+}
+
+.spinner-ring:nth-child(3) {
+    width: 40%;
+    height: 40%;
+    top: 30%;
+    left: 30%;
+    animation-duration: 0.8s;
+    border-top-color: var(--primary-color);
+    opacity: 0.7;
+}
+
+.loading-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-light);
+    letter-spacing: 2px;
+    animation: fadeInOut 1.5s ease-in-out infinite;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 
 @keyframes spin {
     to {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
     }
 }
 
@@ -137,11 +210,15 @@ a {
 
 .navbar {
     background: var(--white);
-    box-shadow: 0 2px 10px var(--shadow);
     position: sticky;
     top: 0;
     z-index: 1000;
     padding: 1rem 0;
+}
+
+.nav-wrapper {
+    position: relative;
+    z-index: 1001;
 }
 
 .nav-wrapper {
@@ -154,6 +231,8 @@ a {
     display: flex;
     align-items: center;
     transition: var(--transition);
+    position: relative;
+    z-index: 1002;
 }
 
 .logo img {
@@ -220,28 +299,45 @@ a {
     color: var(--primary-color);
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s ease;
+}
+
+.hamburger:active {
+    transform: scale(0.95);
 }
 
 .hamburger svg {
-    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 24px;
     height: 24px;
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hamburger .hamburger-icon {
-    display: block;
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
 }
 
 .hamburger .close-icon {
-    display: none;
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(-45deg) scale(0.8);
 }
 
 .hamburger.active .hamburger-icon {
-    display: none;
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(45deg) scale(0.8);
 }
 
 .hamburger.active .close-icon {
-    display: block;
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
 }
 
 /* Mobile Menu Styles */
@@ -264,7 +360,7 @@ a {
         gap: 1.5rem;
         transform: translateX(-100%);
         transition: var(--transition);
-        box-shadow: 0 4px 10px var(--shadow);
+        z-index: 999;
     }
 
     .nav-menu.active {
@@ -1087,6 +1183,141 @@ a {
     height: 28px;
 }
 
+/* ============================================
+   INSTAGRAM FEED STYLES
+   ============================================ */
+
+.instagram-feed-wrapper {
+    margin: 3rem 0;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.instagram-feed-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 3rem 0;
+}
+
+.instagram-post {
+    position: relative;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: var(--bg-light);
+}
+
+.instagram-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.instagram-post a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.instagram-post-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.instagram-post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    display: block;
+}
+
+.instagram-post:hover .instagram-post-image img {
+    transform: scale(1.1);
+}
+
+.instagram-post-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.instagram-post:hover .instagram-post-overlay {
+    opacity: 1;
+}
+
+.instagram-post-overlay svg {
+    width: 40px;
+    height: 40px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* SnapWidget iframe styling */
+.snapwidget-widget {
+    width: 100% !important;
+    max-width: 100%;
+    border: none;
+}
+
+/* No posts / Error messages */
+.instagram-no-posts,
+.instagram-error {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 4rem 2rem;
+    background: var(--bg-light);
+    border-radius: 0;
+}
+
+.instagram-no-posts p,
+.instagram-error p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+    .instagram-feed-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .instagram-feed-wrapper iframe {
+        height: 500px !important;
+    }
+    
+    .instagram-feed-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .instagram-feed-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+    
+    .instagram-no-posts,
+    .instagram-error {
+        padding: 3rem 1.5rem;
+    }
+}
+
 .social-link-btn.linkedin {
     background: #0077b5;
 }
@@ -1608,6 +1839,25 @@ a {
     position: relative;
 }
 
+.service-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+.service-image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.service-image-grid img {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+}
+
 .service-image .image-placeholder {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     height: 350px;
@@ -2071,6 +2321,15 @@ a {
         order: -1;
     }
 
+    .service-image-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .service-image-grid img {
+        height: 250px;
+    }
+
     .facebook-posts-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -2277,6 +2536,111 @@ a {
 .projects-section {
     padding: 3rem 0;
     background: var(--white);
+}
+
+/* Pinterest-style Masonry Layout */
+.projects-masonry {
+    column-count: 2;
+    column-gap: 2rem;
+    padding: 0;
+}
+
+.project-card {
+    break-inside: avoid;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+.project-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    position: relative;
+}
+
+.project-images::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--primary-color);
+    z-index: 3;
+    transform: translateX(-50%);
+}
+
+.project-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.project-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    min-height: 350px;
+    object-fit: cover;
+}
+
+.image-label {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    background: rgba(0, 0, 0, 0.85);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+    z-index: 2;
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1024px) {
+    .projects-masonry {
+        column-count: 2;
+        column-gap: 1.5rem;
+    }
+    
+    .project-image-wrapper img {
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-masonry {
+        column-count: 1;
+        column-gap: 0;
+    }
+    
+    .project-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .project-images {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-images::before {
+        display: none;
+    }
+    
+    .project-image-wrapper:first-child {
+        border-bottom: 2px solid var(--primary-color);
+    }
+    
+    .project-image-wrapper img {
+        min-height: 250px;
+    }
 }
 
 .project-detail-card {

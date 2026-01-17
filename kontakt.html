@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary SEO Meta Tags -->
-    <title>Kontakta Oss | Målare Ljungby ☎ 073-527 19 57 - Sjöstedt Måleri AB</title>
-    <meta name="description" content="Kontakta Sjöstedt Måleri AB i Ljungby. ☎ 073-527 19 57 | sjostedtsmaleri@gmail.com | Torsgatan 117, Ljungby. Gratis offert - vi svarar inom 24 timmar!">
-    <meta name="keywords" content="kontakta målare Ljungby, offert målning Ljungby, målare telefon, måleri Ljungby kontakt, boka målare">
+    <title>Kontakta Oss | Målare Ljungby Småland ☎ 073-527 19 57 - Sjöstedts Måleri AB</title>
+    <meta name="description" content="Kontakta Sjöstedts Måleri AB i Ljungby, Småland. ☎ 073-527 19 57 | sjostedtsmaleri@gmail.com | Torsgatan 117, Ljungby. Gratis offert och hembesök i Ljungby och Kronobergs län - vi svarar inom 24 timmar!">
+    <meta name="keywords" content="kontakta målare Ljungby, offert målning Ljungby, målare telefon Ljungby, måleri Ljungby kontakt, boka målare Ljungby, målare Småland, måleri Kronobergs län, gratis offert Ljungby">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://malerisjostedts.se/kontakt.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/sjostedts-small-logo (1).jpg">
+    <link rel="apple-touch-icon" href="images/sjostedts-small-logo (1).jpg">
     
     <!-- Geo Meta Tags -->
     <meta name="geo.region" content="SE-G">
@@ -18,8 +22,8 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://malerisjostedts.se/kontakt.html">
-    <meta property="og:title" content="Kontakta Oss | Sjöstedt Måleri AB Ljungby">
-    <meta property="og:description" content="Kontakta oss för gratis offert på målning. Ring 073-527 19 57 eller fyll i formuläret. Vi svarar inom 24 timmar!">
+    <meta property="og:title" content="Kontakta Oss | Sjöstedts Måleri AB Ljungby Småland">
+    <meta property="og:description" content="Kontakta oss för gratis offert på målning i Ljungby, Småland. Ring 073-527 19 57 eller fyll i formuläret. Vi svarar inom 24 timmar!">
     <meta property="og:locale" content="sv_SE">
     
     <!-- ContactPage Schema -->
@@ -27,11 +31,14 @@
     {
       "@context": "https://schema.org",
       "@type": "ContactPage",
-      "name": "Kontakta Sjöstedt Måleri AB",
-      "description": "Kontaktsida för Sjöstedt Måleri AB i Ljungby, Småland",
+      "name": "Kontakta Sjöstedts Måleri AB",
+      "description": "Kontaktsida för Sjöstedts Måleri AB i Ljungby, Småland",
       "mainEntity": {
         "@type": "HousePainter",
-        "name": "Sjöstedt Måleri AB",
+        "@id": "https://malerisjostedts.se/#organization",
+        "name": "Sjöstedts Måleri AB",
+        "alternateName": "Sjöstedts Måleri",
+        "url": "https://malerisjostedts.se",
         "telephone": "+46735271957",
         "email": "sjostedtsmaleri@gmail.com",
         "address": {
@@ -54,7 +61,32 @@
             "opens": "07:00",
             "closes": "17:00"
           }
-        ]
+        ],
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Ljungby"
+          },
+          {
+            "@type": "City",
+            "name": "Växjö"
+          },
+          {
+            "@type": "City",
+            "name": "Alvesta"
+          },
+          {
+            "@type": "City",
+            "name": "Värnamo"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Kronobergs län"
+          }
+        ],
+        "priceRange": "$$",
+        "paymentAccepted": ["Cash", "Credit Card", "Invoice"],
+        "currenciesAccepted": "SEK"
       }
     }
     </script>
@@ -88,7 +120,7 @@
     <nav class="navbar">
         <div class="container">
             <div class="nav-wrapper">
-                <a href="index.html" class="logo"><img src="images/logga.png" alt="Sjöstedt Måleri AB" width="100"></a>
+                <a href="index.html" class="logo"><img src="images/logga.png" alt="Sjöstedts Måleri AB - Målare Ljungby Småland" width="100"></a>
                 <button class="hamburger" id="hamburger" aria-label="Öppna meny">
                     <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -133,7 +165,7 @@
                 </div>
                 <div class="info-grid-card">
                     <h3>Adress</h3>
-                    <p>Sjöstedt Måleri AB</p>
+                    <p>Sjöstedts Måleri AB</p>
                     <p>Torsgatan 117</p>
                     <p>Ljungby, Sweden</p>
                 </div>
@@ -141,7 +173,12 @@
 
             <div class="contact-form-section">
                 <h2>Skicka oss ett meddelande</h2>
-                <form class="contact-form" id="contact-form">
+                <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <!-- Web3Forms Access Key - Ersätt med din egen access key från https://web3forms.com -->
+                    <input type="hidden" name="access_key" value="fb7e6869-aad7-4fdc-ac2c-98a1be646111">
+                    <input type="hidden" name="subject" value="Kontaktförfrågan från Sjöstedts Måleri AB hemsida">
+                    <input type="hidden" name="from_name" value="Sjöstedts Måleri AB Kontaktformulär">
+                    
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Namn *</label>
@@ -158,12 +195,12 @@
                             <input type="tel" id="phone" name="phone">
                         </div>
                         <div class="form-group">
-                            <label for="subject">Ämne *</label>
-                            <select id="subject" name="subject" required>
+                            <label for="subject-select">Ämne *</label>
+                            <select id="subject-select" name="subject_select" required>
                                 <option value="">Välj ämne</option>
-                                <option value="offer">Förfrågan om offert</option>
-                                <option value="info">Förfrågan om information</option>
-                                <option value="other">Övrigt</option>
+                                <option value="Förfrågan om offert">Förfrågan om offert</option>
+                                <option value="Förfrågan om information">Förfrågan om information</option>
+                                <option value="Övrigt">Övrigt</option>
                             </select>
                         </div>
                     </div>
@@ -171,7 +208,11 @@
                         <label for="message">Meddelande *</label>
                         <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Skicka meddelande</button>
+                    <div id="form-message" style="display: none; margin-bottom: 1rem; padding: 1rem; border-radius: 0;"></div>
+                    <button type="submit" class="btn btn-primary" id="contact-submit-btn">
+                        <span class="btn-text">Skicka meddelande</span>
+                        <span class="btn-loading" style="display: none;">Skickar...</span>
+                    </button>
                 </form>
             </div>
         </div>
@@ -191,7 +232,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>Sjöstedt Måleri AB</h3>
+                    <h3>Sjöstedts Måleri AB</h3>
                     <p>Professionell målning i Ljungby. Vi förvandlar dina visioner till verklighet med vår passion för måleri och expertis.</p>
                     <div class="social-icons">
                         <a href="https://www.facebook.com/p/Sj%C3%B6stedts-M%C3%A5leri-AB-100066792379905/" target="_blank" class="social-icon" aria-label="Facebook">
@@ -237,7 +278,7 @@
             
             <div class="footer-bottom">
                 <div class="footer-bottom-content">
-                    <p>&copy; <span id="year"></span> Sjöstedt Måleri AB. Alla rättigheter förbehållna.</p>
+                    <p>&copy; <span id="year"></span> Sjöstedts Måleri AB. Alla rättigheter förbehållna.</p>
                     <p class="credits">Hemsida producerad av <a href="https://www.linkedin.com/in/martin-pranjic-99a278310/" target="_blank" class="credit-link">Martin Pranjic</a></p>
                 </div>
             </div>

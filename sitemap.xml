@@ -3,7 +3,7 @@
   <!-- Startsida - Högsta prioritet -->
   <url>
     <loc>https://malerisjostedts.se/</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -11,7 +11,7 @@
   <!-- Tjänster - Viktig för konvertering -->
   <url>
     <loc>https://malerisjostedts.se/tjanster.html</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -19,7 +19,7 @@
   <!-- Boka Målning - Konverteringssida -->
   <url>
     <loc>https://malerisjostedts.se/boka.html</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -27,7 +27,7 @@
   <!-- Projekt - Portfolio -->
   <url>
     <loc>https://malerisjostedts.se/projekt.html</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -35,7 +35,7 @@
   <!-- Kontakt -->
   <url>
     <loc>https://malerisjostedts.se/kontakt.html</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
